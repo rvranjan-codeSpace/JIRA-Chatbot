@@ -1,0 +1,145 @@
+Question: Create a mindmap for all issues in project ABC
+Gold JQL: project = ABC
+
+Question: Create a dependecy graph for project ABC
+Gold JQL: project = ABC
+
+Question: Create a JQL for all issues types in project ABc
+Gold JQL: project = ABC
+
+Question: Create a mindmap for all issues assigned to me or current user
+Gold JQL: assignee = currentUser()
+
+Question: Create a dependency graph for all issues assigned to me or current user
+Gold JQL: assignee = currentUser()
+
+Question: Write a JQL or JIRA query for all issues assigned to me or current user
+Gold JQL: assignee = currentUser()
+
+Question: Create a mindmap for user story with key ABC
+Gold JQL: project = "ABC" AND issueType IN (Story)
+
+Question: Create a dependency graph for user story with key ABC
+Gold JQL: project = "ABC" AND issueType IN (Story)
+
+Question: Write a JQL or JIRA query for user story with key ABC
+Gold JQL: project = "ABC" AND issueType IN (Story)
+
+Question: Create a mindmap for issues reported to me with issue type Story or Test
+Gold JQL: assignee = currentUser() AND issuetype IN (Story, Test)
+
+Question: Create a dependency graph for issues reported to me with issue type Story or Test
+Gold JQL: assignee = currentUser() AND issuetype IN (Story, Test)
+
+Question: Write a JQL or JIRA query for issues reported to me with issue type Story or Test
+Gold JQL: assignee = currentUser() AND issuetype IN (Story, Test)
+
+Question: Create a mindmap for project ABC of type Story
+Gold JQL: project = "ABC" AND issueType = "Story"
+
+Question: Create a dependency graph for project ABC of type Story
+Gold JQL: project = "ABC" AND issueType = "Story"
+
+Question: Write a JQL or JIRA query for project ABC of type Story
+Gold JQL: project = "ABC" AND issueType = "Story"
+
+Question: Create a mindmap for project BGRFG and issuetype Story
+Gold JQL: project = "BGRFG" AND issueType = "Story"
+
+Question: Create a dependency graph for project BGRFG and issuetype Story
+Gold JQL: project = "BGRFG" AND issueType = "Story"
+
+Question: Write a JQL or JIRA query for project BGRFG and issuetype Story
+Gold JQL: project = "BGRFG" AND issueType = "Story"
+
+Question: Create a mindmap for project ABC and issue types Story and Test
+Gold JQL: project = "ABC" AND issueType IN (Story, Test)
+
+Question: Create a dependency graph for project ABC and issue types Story and Test
+Gold JQL: project = "ABC" AND issueType IN (Story, Test)
+
+Question: Write a JQL or JIRA query for project ABC and issue types Story and Test
+Gold JQL: project = "ABC" AND issueType IN (Story, Test)
+
+Question: Create a mindmap for all issues with status "In Progress" or "To Do"
+Gold JQL: status IN ("In Progress", "To Do")
+
+Question: Create a dependency graph for all issues with status "In Progress" or "To Do"
+Gold JQL: status IN ("In Progress", "To Do")
+
+Question: Write a JQL or JIRA query for all issues with status "In Progress" or "To Do"
+Gold JQL: status IN ("In Progress", "To Do")
+
+Question: Create a mindmap for project ABC of all issues unassigned or with empty assignee
+Gold JQL: assignee IS EMPTY AND project = "ABC"
+
+Question: Create a dependency graph for project ABC of all issues unassigned or with empty assignee
+Gold JQL: assignee IS EMPTY AND project = "ABC"
+
+Question: Write a JQL or JIRA query for project ABC of all issues unassigned or with empty assignee
+Gold JQL: assignee IS EMPTY AND project = "ABC"
+
+Question: Create a mindmap for issues under epic XSP-3 and XSP-8 with type Story, Test, or Bug
+Gold JQL: parent IN (XSP-3, XSP-8) AND issueType IN (Story, Test, Bug)
+
+Question: Create a dependency graph for issues under epic XSP-3 and XSP-8 with type Story, Test, or Bug
+Gold JQL: parent IN (XSP-3, XSP-8) AND issueType IN (Story, Test, Bug)
+
+Question: Write a JQL or JIRA query for issues under epic XSP-3 and XSP-8 with type Story, Test, or Bug
+Gold JQL: parent IN (XSP-3, XSP-8) AND issueType IN (Story, Test, Bug)
+
+Question: Create a mindmap for issues under epic XSP-3 with type Story
+Gold JQL: parent IN (XSP-3) AND issueType = "Story"
+
+Question: Create a dependency graph for issues under epic XSP-3 with type Story
+Gold JQL: parent IN (XSP-3) AND issueType = "Story"
+
+Question: Write a JQL or JIRA query for issues under epic XSP-3 with type Story
+Gold JQL: parent IN (XSP-3) AND issueType = "Story"
+
+Question: Create a mindmap for issues in project ABC with link type "duplicates"
+Gold JQL: issueLinkType = "duplicates" AND project = "ABC"
+
+Question: Create a dependency graph for issues in project ABC with link type "duplicates"
+Gold JQL: issueLinkType = "duplicates" AND project = "ABC"
+
+Question: Write a JQL or JIRA query for issues in project ABC with link type "duplicates"
+Gold JQL: issueLinkType = "duplicates" AND project = "ABC"
+
+Question: Create a mindmap for issues that are blocked by other issues
+Gold JQL: issueLinkType = "is blocked by"
+
+Question: Create a dependency graph for issues that are blocked by other issues
+Gold JQL: issueLinkType = "is blocked by"
+
+Question: Write a JQL or JIRA query for issues that are blocked by other issues
+Gold JQL: issueLinkType = "is blocked by"
+
+Question: Create a mindmap for To obtain the list of issues linked to a XSP-58
+Gold JQL: issue in linkedIssues(XSP-58)
+
+Question: Create a dependency graph for the list of issues linked to a  XSP-58
+Gold JQL: issue in linkedIssues(XSP-58)
+
+Question: Write a JQL or JIRA query for the list of issues linked to a XSP-58
+Gold JQL: issue in linkedIssues(XSP-58)
+
+Question: Create a mindmap for all issues (tests, user stories, bug) that blocks issue ABC
+Gold JQL: issue in linkedIssues(ABC, "is blocked by") AND issuetype IN( Story, Test, Bug)
+
+Question: Create a dependency graph for the list of issues (tests, user stories, bug) that blocks issue ABC
+Gold JQL: issue in linkedIssues(ABC, "is blocked by") AND issuetype IN( Story, Test, Bug)
+
+Question: Write a JQL or JIRA query for the list of issues (tests, user stories, bug)that blocks issue ABC
+Gold JQL: issue in linkedIssues(ABC, "is blocked by") AND iissuetype IN( Story, Test, Bug)
+
+Question: Create a mindmap for only and only user stories blocked by issue(tests, userstory, bug) ABC
+Gold JQL: issue in linkedIssues(ABC, "is blocked by") AND issuetype IN( Story)
+
+Question: Create a dependency graph for just user stories blocked by issue(tests, userstory, bug) ABC
+Gold JQL: issue in linkedIssues(ABC, "is blocked by") AND issuetype IN( Story)
+
+Question: Write a JQL or JIRA query for only user stories blocked by issue(tests, userstory, bug) ABC
+Gold JQL: issue in linkedIssues(ABC, "is blocked by") AND issuetype IN( Story)
+
+
